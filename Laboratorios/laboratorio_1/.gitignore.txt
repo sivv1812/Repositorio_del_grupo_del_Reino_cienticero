@@ -1,8 +1,8 @@
-# Ignora la carpeta 'videos'
+# No sube los videos de la carpeta 'videos'
 videos/
 
-# Ignora todos los archivos con extensión .txt
+# No sube los archivos con extensión .txt
 *.txt
 
-# Excepción: no ignores el archivo 171.txt que está dentro de la carpeta texts
+# El unico archivo txt que no es eliminado es 171.txt que está dentro de la carpeta texts
 !texts/171.txt
