@@ -1,0 +1,8 @@
+# Ignora la carpeta 'videos'
+videos/
+
+# Ignora todos los archivos con extensión .txt
+*.txt
+
+# Excepción: no ignores el archivo 171.txt que está dentro de la carpeta texts
+!texts/171.txt
