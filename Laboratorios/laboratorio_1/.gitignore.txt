@@ -1,8 +1,0 @@
-# No sube los videos de la carpeta 'videos'
-videos/
-
-# No sube los archivos con extensión .txt
-*.txt
-
-# El unico archivo txt que no es eliminado es 171.txt que está dentro de la carpeta texts
-!texts/171.txt
