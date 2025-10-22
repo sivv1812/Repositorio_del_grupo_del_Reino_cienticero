@@ -1,0 +1,24 @@
+# Los entornos virtuales
+venv/
+.venv/
+env/
+
+# Los archivos de caché de Python
+__pycache__/
+*.pyc
+
+# Los archivos de configuración de IDE
+.vscode/
+.idea/
+
+# Los archivos de entrenamiento no necesarios para la aplicación web
+optimize.py
+water_potability.csv
+plots/
+configs/
+
+# Los archivos locales
+.git/
+.gitignore
+
+

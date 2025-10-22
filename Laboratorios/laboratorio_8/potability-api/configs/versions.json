@@ -1,0 +1,9 @@
+{
+  "python": "3.13.9",
+  "numpy": "2.3.4",
+  "pandas": "2.3.3",
+  "scikit_learn": "1.7.2",
+  "xgboost": "3.1.0",
+  "optuna": "4.5.0",
+  "mlflow": "3.5.0"
+}
