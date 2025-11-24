@@ -1,0 +1,177 @@
+[2025-11-19T22:27:52.819+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: full_ml_pipeline_v2.retrain_task manual__2025-11-19T22:19:50.757745+00:00 [queued]>
+[2025-11-19T22:27:52.856+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: full_ml_pipeline_v2.retrain_task manual__2025-11-19T22:19:50.757745+00:00 [queued]>
+[2025-11-19T22:27:52.857+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 2
+[2025-11-19T22:27:52.904+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): retrain_task> on 2025-11-19 22:19:50.757745+00:00
+[2025-11-19T22:27:52.912+0000] {standard_task_runner.py:60} INFO - Started process 273 to run task
+[2025-11-19T22:27:52.921+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'full_ml_pipeline_v2', 'retrain_task', 'manual__2025-11-19T22:19:50.757745+00:00', '--job-id', '28', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmp5q173r9z']
+[2025-11-19T22:27:52.932+0000] {standard_task_runner.py:88} INFO - Job 28: Subtask retrain_task
+[2025-11-19T22:27:53.574+0000] {task_command.py:423} INFO - Running <TaskInstance: full_ml_pipeline_v2.retrain_task manual__2025-11-19T22:19:50.757745+00:00 [running]> on host 82cf0d6cbc8c
+[2025-11-19T22:27:53.766+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='equipo_datos' AIRFLOW_CTX_DAG_ID='full_ml_pipeline_v2' AIRFLOW_CTX_TASK_ID='retrain_task' AIRFLOW_CTX_EXECUTION_DATE='2025-11-19T22:19:50.757745+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-19T22:19:50.757745+00:00'
+[2025-11-19T22:27:53.769+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-11-19T22:27:53.771+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/train_optuna_mlflow.py']
+[2025-11-19T22:27:53.788+0000] {subprocess.py:86} INFO - Output:
+[2025-11-19T22:28:01.219+0000] {subprocess.py:93} INFO - [I 2025-11-19 22:28:01,218] A new study created in memory with name: no-name-e8d067f5-0f9f-4b8e-8d9c-2aefe64ecab0
+[2025-11-19T22:28:52.112+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/xgboost/core.py:158: UserWarning: [22:28:01] WARNING: /workspace/src/learner.cc:740:
+[2025-11-19T22:28:52.112+0000] {subprocess.py:93} INFO - Parameters: { "use_label_encoder" } are not used.
+[2025-11-19T22:28:52.113+0000] {subprocess.py:93} INFO - 
+[2025-11-19T22:28:52.113+0000] {subprocess.py:93} INFO -   warnings.warn(smsg, UserWarning)
+[2025-11-19T22:28:52.114+0000] {subprocess.py:93} INFO - [I 2025-11-19 22:28:52,111] Trial 0 finished with value: 0.5771151245243298 and parameters: {'n_estimators': 139, 'max_depth': 7, 'learning_rate': 0.01851911987687151, 'subsample': 0.7698980145715115, 'colsample_bytree': 0.8531994667878916}. Best is trial 0 with value: 0.5771151245243298.
+[2025-11-19T22:29:07.551+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/xgboost/core.py:158: UserWarning: [22:28:52] WARNING: /workspace/src/learner.cc:740:
+[2025-11-19T22:29:07.551+0000] {subprocess.py:93} INFO - Parameters: { "use_label_encoder" } are not used.
+[2025-11-19T22:29:07.552+0000] {subprocess.py:93} INFO - 
+[2025-11-19T22:29:07.552+0000] {subprocess.py:93} INFO -   warnings.warn(smsg, UserWarning)
+[2025-11-19T22:29:07.553+0000] {subprocess.py:93} INFO - [I 2025-11-19 22:29:07,550] Trial 1 finished with value: 0.5970233710784723 and parameters: {'n_estimators': 164, 'max_depth': 6, 'learning_rate': 0.052315651627841124, 'subsample': 0.8680167421904204, 'colsample_bytree': 0.9005556720710657}. Best is trial 1 with value: 0.5970233710784723.
+[2025-11-19T22:29:18.669+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/xgboost/core.py:158: UserWarning: [22:29:07] WARNING: /workspace/src/learner.cc:740:
+[2025-11-19T22:29:18.670+0000] {subprocess.py:93} INFO - Parameters: { "use_label_encoder" } are not used.
+[2025-11-19T22:29:18.670+0000] {subprocess.py:93} INFO - 
+[2025-11-19T22:29:18.671+0000] {subprocess.py:93} INFO -   warnings.warn(smsg, UserWarning)
+[2025-11-19T22:29:18.671+0000] {subprocess.py:93} INFO - [I 2025-11-19 22:29:18,669] Trial 2 finished with value: 0.643984888084004 and parameters: {'n_estimators': 157, 'max_depth': 7, 'learning_rate': 0.08870888409656877, 'subsample': 0.826877118223359, 'colsample_bytree': 0.6771391765454994}. Best is trial 2 with value: 0.643984888084004.
+[2025-11-19T22:29:25.164+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/xgboost/core.py:158: UserWarning: [22:29:18] WARNING: /workspace/src/learner.cc:740:
+[2025-11-19T22:29:25.164+0000] {subprocess.py:93} INFO - Parameters: { "use_label_encoder" } are not used.
+[2025-11-19T22:29:25.165+0000] {subprocess.py:93} INFO - 
+[2025-11-19T22:29:25.165+0000] {subprocess.py:93} INFO -   warnings.warn(smsg, UserWarning)
+[2025-11-19T22:29:25.166+0000] {subprocess.py:93} INFO - [I 2025-11-19 22:29:25,164] Trial 3 finished with value: 0.5872440846463326 and parameters: {'n_estimators': 139, 'max_depth': 5, 'learning_rate': 0.08510843616385115, 'subsample': 0.8755785222637316, 'colsample_bytree': 0.6443508552865204}. Best is trial 2 with value: 0.643984888084004.
+[2025-11-19T22:29:33.703+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/xgboost/core.py:158: UserWarning: [22:29:25] WARNING: /workspace/src/learner.cc:740:
+[2025-11-19T22:29:33.704+0000] {subprocess.py:93} INFO - Parameters: { "use_label_encoder" } are not used.
+[2025-11-19T22:29:33.705+0000] {subprocess.py:93} INFO - 
+[2025-11-19T22:29:33.706+0000] {subprocess.py:93} INFO -   warnings.warn(smsg, UserWarning)
+[2025-11-19T22:29:33.706+0000] {subprocess.py:93} INFO - [I 2025-11-19 22:29:33,703] Trial 4 finished with value: 0.6123717817077989 and parameters: {'n_estimators': 166, 'max_depth': 5, 'learning_rate': 0.11584515468209051, 'subsample': 0.8182358026146455, 'colsample_bytree': 0.6796947936791475}. Best is trial 2 with value: 0.643984888084004.
+[2025-11-19T22:30:17.697+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/xgboost/core.py:158: UserWarning: [22:29:34] WARNING: /workspace/src/learner.cc:740:
+[2025-11-19T22:30:17.698+0000] {subprocess.py:93} INFO - Parameters: { "use_label_encoder" } are not used.
+[2025-11-19T22:30:17.698+0000] {subprocess.py:93} INFO - 
+[2025-11-19T22:30:17.699+0000] {subprocess.py:93} INFO -   warnings.warn(smsg, UserWarning)
+[2025-11-19T22:30:17.699+0000] {subprocess.py:93} INFO - [I 2025-11-19 22:30:17,697] Trial 5 finished with value: 0.6345465273527355 and parameters: {'n_estimators': 116, 'max_depth': 8, 'learning_rate': 0.06243781111160213, 'subsample': 0.6556376237179299, 'colsample_bytree': 0.8062513497955}. Best is trial 2 with value: 0.643984888084004.
+[2025-11-19T22:30:51.001+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/xgboost/core.py:158: UserWarning: [22:30:17] WARNING: /workspace/src/learner.cc:740:
+[2025-11-19T22:30:51.001+0000] {subprocess.py:93} INFO - Parameters: { "use_label_encoder" } are not used.
+[2025-11-19T22:30:51.002+0000] {subprocess.py:93} INFO - 
+[2025-11-19T22:30:51.002+0000] {subprocess.py:93} INFO -   warnings.warn(smsg, UserWarning)
+[2025-11-19T22:30:51.003+0000] {subprocess.py:93} INFO - [I 2025-11-19 22:30:51,000] Trial 6 finished with value: 0.6556800239186846 and parameters: {'n_estimators': 158, 'max_depth': 8, 'learning_rate': 0.06987648734826349, 'subsample': 0.7973718192226923, 'colsample_bytree': 0.7310450573424113}. Best is trial 6 with value: 0.6556800239186846.
+[2025-11-19T22:31:00.267+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/xgboost/core.py:158: UserWarning: [22:30:51] WARNING: /workspace/src/learner.cc:740:
+[2025-11-19T22:31:00.267+0000] {subprocess.py:93} INFO - Parameters: { "use_label_encoder" } are not used.
+[2025-11-19T22:31:00.268+0000] {subprocess.py:93} INFO - 
+[2025-11-19T22:31:00.268+0000] {subprocess.py:93} INFO -   warnings.warn(smsg, UserWarning)
+[2025-11-19T22:31:00.269+0000] {subprocess.py:93} INFO - [I 2025-11-19 22:31:00,266] Trial 7 finished with value: 0.505045368237533 and parameters: {'n_estimators': 103, 'max_depth': 3, 'learning_rate': 0.011966047861988054, 'subsample': 0.8931121933422188, 'colsample_bytree': 0.8930041488259799}. Best is trial 6 with value: 0.6556800239186846.
+[2025-11-19T22:31:42.959+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/xgboost/core.py:158: UserWarning: [22:31:00] WARNING: /workspace/src/learner.cc:740:
+[2025-11-19T22:31:43.002+0000] {subprocess.py:93} INFO - Parameters: { "use_label_encoder" } are not used.
+[2025-11-19T22:31:43.117+0000] {subprocess.py:93} INFO - 
+[2025-11-19T22:31:43.216+0000] {subprocess.py:93} INFO -   warnings.warn(smsg, UserWarning)
+[2025-11-19T22:31:43.261+0000] {subprocess.py:93} INFO - [I 2025-11-19 22:31:42,959] Trial 8 finished with value: 0.7138183813504901 and parameters: {'n_estimators': 176, 'max_depth': 8, 'learning_rate': 0.1868795530453273, 'subsample': 0.8389476575801321, 'colsample_bytree': 0.8977913888464333}. Best is trial 8 with value: 0.7138183813504901.
+[2025-11-19T22:32:15.070+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/xgboost/core.py:158: UserWarning: [22:31:43] WARNING: /workspace/src/learner.cc:740:
+[2025-11-19T22:32:15.071+0000] {subprocess.py:93} INFO - Parameters: { "use_label_encoder" } are not used.
+[2025-11-19T22:32:15.072+0000] {subprocess.py:93} INFO - 
+[2025-11-19T22:32:15.072+0000] {subprocess.py:93} INFO -   warnings.warn(smsg, UserWarning)
+[2025-11-19T22:32:15.073+0000] {subprocess.py:93} INFO - [I 2025-11-19 22:32:15,070] Trial 9 finished with value: 0.5397109528104601 and parameters: {'n_estimators': 143, 'max_depth': 4, 'learning_rate': 0.02456637574281991, 'subsample': 0.8700400694929487, 'colsample_bytree': 0.8096664381302446}. Best is trial 8 with value: 0.7138183813504901.
+[2025-11-19T22:32:53.634+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/xgboost/core.py:158: UserWarning: [22:32:15] WARNING: /workspace/src/learner.cc:740:
+[2025-11-19T22:32:53.635+0000] {subprocess.py:93} INFO - Parameters: { "use_label_encoder" } are not used.
+[2025-11-19T22:32:53.636+0000] {subprocess.py:93} INFO - 
+[2025-11-19T22:32:53.637+0000] {subprocess.py:93} INFO -   warnings.warn(smsg, UserWarning)
+[2025-11-19T22:32:53.637+0000] {subprocess.py:93} INFO - [I 2025-11-19 22:32:53,633] Trial 10 finished with value: 0.7045166207093951 and parameters: {'n_estimators': 200, 'max_depth': 7, 'learning_rate': 0.21206140979670005, 'subsample': 0.9983685009235915, 'colsample_bytree': 0.986245621119947}. Best is trial 8 with value: 0.7138183813504901.
+[2025-11-19T22:33:12.654+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/xgboost/core.py:158: UserWarning: [22:32:54] WARNING: /workspace/src/learner.cc:740:
+[2025-11-19T22:33:12.655+0000] {subprocess.py:93} INFO - Parameters: { "use_label_encoder" } are not used.
+[2025-11-19T22:33:12.655+0000] {subprocess.py:93} INFO - 
+[2025-11-19T22:33:12.656+0000] {subprocess.py:93} INFO -   warnings.warn(smsg, UserWarning)
+[2025-11-19T22:33:12.657+0000] {subprocess.py:93} INFO - [I 2025-11-19 22:33:12,653] Trial 11 finished with value: 0.7158264299801793 and parameters: {'n_estimators': 199, 'max_depth': 7, 'learning_rate': 0.27748562414065253, 'subsample': 0.9764689680866072, 'colsample_bytree': 0.9992677656688826}. Best is trial 11 with value: 0.7158264299801793.
+[2025-11-19T22:33:29.495+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/xgboost/core.py:158: UserWarning: [22:33:12] WARNING: /workspace/src/learner.cc:740:
+[2025-11-19T22:33:29.496+0000] {subprocess.py:93} INFO - Parameters: { "use_label_encoder" } are not used.
+[2025-11-19T22:33:29.496+0000] {subprocess.py:93} INFO - 
+[2025-11-19T22:33:29.496+0000] {subprocess.py:93} INFO -   warnings.warn(smsg, UserWarning)
+[2025-11-19T22:33:29.497+0000] {subprocess.py:93} INFO - [I 2025-11-19 22:33:29,495] Trial 12 finished with value: 0.7295620996031481 and parameters: {'n_estimators': 198, 'max_depth': 8, 'learning_rate': 0.2855124370656515, 'subsample': 0.9893746158590775, 'colsample_bytree': 0.9900982285862384}. Best is trial 12 with value: 0.7295620996031481.
+[2025-11-19T22:33:41.900+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/xgboost/core.py:158: UserWarning: [22:33:29] WARNING: /workspace/src/learner.cc:740:
+[2025-11-19T22:33:41.901+0000] {subprocess.py:93} INFO - Parameters: { "use_label_encoder" } are not used.
+[2025-11-19T22:33:41.902+0000] {subprocess.py:93} INFO - 
+[2025-11-19T22:33:41.902+0000] {subprocess.py:93} INFO -   warnings.warn(smsg, UserWarning)
+[2025-11-19T22:33:41.903+0000] {subprocess.py:93} INFO - [I 2025-11-19 22:33:41,900] Trial 13 finished with value: 0.6979219385347873 and parameters: {'n_estimators': 198, 'max_depth': 6, 'learning_rate': 0.2910503839226933, 'subsample': 0.9925692631927285, 'colsample_bytree': 0.9788871796126812}. Best is trial 12 with value: 0.7295620996031481.
+[2025-11-19T22:33:53.799+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/xgboost/core.py:158: UserWarning: [22:33:42] WARNING: /workspace/src/learner.cc:740:
+[2025-11-19T22:33:53.800+0000] {subprocess.py:93} INFO - Parameters: { "use_label_encoder" } are not used.
+[2025-11-19T22:33:53.800+0000] {subprocess.py:93} INFO - 
+[2025-11-19T22:33:53.801+0000] {subprocess.py:93} INFO -   warnings.warn(smsg, UserWarning)
+[2025-11-19T22:33:53.801+0000] {subprocess.py:93} INFO - [I 2025-11-19 22:33:53,799] Trial 14 finished with value: 0.6857581996554278 and parameters: {'n_estimators': 186, 'max_depth': 7, 'learning_rate': 0.1533645570800624, 'subsample': 0.9396018453067497, 'colsample_bytree': 0.9971364891838647}. Best is trial 12 with value: 0.7295620996031481.
+[2025-11-19T22:34:06.984+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/xgboost/core.py:158: UserWarning: [22:33:54] WARNING: /workspace/src/learner.cc:740:
+[2025-11-19T22:34:06.985+0000] {subprocess.py:93} INFO - Parameters: { "use_label_encoder" } are not used.
+[2025-11-19T22:34:06.985+0000] {subprocess.py:93} INFO - 
+[2025-11-19T22:34:06.986+0000] {subprocess.py:93} INFO -   warnings.warn(smsg, UserWarning)
+[2025-11-19T22:34:06.986+0000] {subprocess.py:93} INFO - [I 2025-11-19 22:34:06,984] Trial 15 finished with value: 0.7289337500392421 and parameters: {'n_estimators': 184, 'max_depth': 8, 'learning_rate': 0.28467468874236096, 'subsample': 0.9366199921136089, 'colsample_bytree': 0.9425881427666368}. Best is trial 12 with value: 0.7295620996031481.
+[2025-11-19T22:34:17.326+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/xgboost/core.py:158: UserWarning: [22:34:07] WARNING: /workspace/src/learner.cc:740:
+[2025-11-19T22:34:17.327+0000] {subprocess.py:93} INFO - Parameters: { "use_label_encoder" } are not used.
+[2025-11-19T22:34:17.327+0000] {subprocess.py:93} INFO - 
+[2025-11-19T22:34:17.328+0000] {subprocess.py:93} INFO -   warnings.warn(smsg, UserWarning)
+[2025-11-19T22:34:17.328+0000] {subprocess.py:93} INFO - [I 2025-11-19 22:34:17,326] Trial 16 finished with value: 0.6296688182531214 and parameters: {'n_estimators': 184, 'max_depth': 8, 'learning_rate': 0.035447049073599135, 'subsample': 0.9297947696360754, 'colsample_bytree': 0.9335039299603807}. Best is trial 12 with value: 0.7295620996031481.
+[2025-11-19T22:34:25.584+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/xgboost/core.py:158: UserWarning: [22:34:17] WARNING: /workspace/src/learner.cc:740:
+[2025-11-19T22:34:25.585+0000] {subprocess.py:93} INFO - Parameters: { "use_label_encoder" } are not used.
+[2025-11-19T22:34:25.585+0000] {subprocess.py:93} INFO - 
+[2025-11-19T22:34:25.586+0000] {subprocess.py:93} INFO -   warnings.warn(smsg, UserWarning)
+[2025-11-19T22:34:25.586+0000] {subprocess.py:93} INFO - [I 2025-11-19 22:34:25,584] Trial 17 finished with value: 0.6490201658364714 and parameters: {'n_estimators': 181, 'max_depth': 6, 'learning_rate': 0.13156265224720998, 'subsample': 0.7261521062618149, 'colsample_bytree': 0.7481795236129124}. Best is trial 12 with value: 0.7295620996031481.
+[2025-11-19T22:34:34.481+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/xgboost/core.py:158: UserWarning: [22:34:25] WARNING: /workspace/src/learner.cc:740:
+[2025-11-19T22:34:34.482+0000] {subprocess.py:93} INFO - Parameters: { "use_label_encoder" } are not used.
+[2025-11-19T22:34:34.482+0000] {subprocess.py:93} INFO - 
+[2025-11-19T22:34:34.482+0000] {subprocess.py:93} INFO -   warnings.warn(smsg, UserWarning)
+[2025-11-19T22:34:34.483+0000] {subprocess.py:93} INFO - [I 2025-11-19 22:34:34,481] Trial 18 finished with value: 0.7175953285583051 and parameters: {'n_estimators': 172, 'max_depth': 8, 'learning_rate': 0.2071797523727349, 'subsample': 0.9352192757633601, 'colsample_bytree': 0.9400704996553396}. Best is trial 12 with value: 0.7295620996031481.
+[2025-11-19T22:34:39.916+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/xgboost/core.py:158: UserWarning: [22:34:34] WARNING: /workspace/src/learner.cc:740:
+[2025-11-19T22:34:39.917+0000] {subprocess.py:93} INFO - Parameters: { "use_label_encoder" } are not used.
+[2025-11-19T22:34:39.918+0000] {subprocess.py:93} INFO - 
+[2025-11-19T22:34:39.918+0000] {subprocess.py:93} INFO -   warnings.warn(smsg, UserWarning)
+[2025-11-19T22:34:39.918+0000] {subprocess.py:93} INFO - [I 2025-11-19 22:34:39,916] Trial 19 finished with value: 0.5401769462766819 and parameters: {'n_estimators': 190, 'max_depth': 3, 'learning_rate': 0.04086785063699339, 'subsample': 0.9570145882178334, 'colsample_bytree': 0.8559504516816763}. Best is trial 12 with value: 0.7295620996031481.
+[2025-11-19T22:34:49.470+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/xgboost/core.py:158: UserWarning: [22:34:40] WARNING: /workspace/src/learner.cc:740:
+[2025-11-19T22:34:49.471+0000] {subprocess.py:93} INFO - Parameters: { "use_label_encoder" } are not used.
+[2025-11-19T22:34:49.472+0000] {subprocess.py:93} INFO - 
+[2025-11-19T22:34:49.472+0000] {subprocess.py:93} INFO -   warnings.warn(smsg, UserWarning)
+[2025-11-19T22:34:49.473+0000] {subprocess.py:93} INFO - 2025/11/19 22:34:49 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git SHA is not available. Error: Failed to initialize: Bad git executable.
+[2025-11-19T22:34:49.473+0000] {subprocess.py:93} INFO - The git executable must be specified in one of the following ways:
+[2025-11-19T22:34:49.474+0000] {subprocess.py:93} INFO -     - be included in your $PATH
+[2025-11-19T22:34:49.474+0000] {subprocess.py:93} INFO -     - be set via $GIT_PYTHON_GIT_EXECUTABLE
+[2025-11-19T22:34:49.475+0000] {subprocess.py:93} INFO -     - explicitly set via git.refresh(<full-path-to-git-executable>)
+[2025-11-19T22:34:49.475+0000] {subprocess.py:93} INFO - 
+[2025-11-19T22:34:49.476+0000] {subprocess.py:93} INFO - All git commands will error until this is rectified.
+[2025-11-19T22:34:49.476+0000] {subprocess.py:93} INFO - 
+[2025-11-19T22:34:49.477+0000] {subprocess.py:93} INFO - This initial message can be silenced or aggravated in the future by setting the
+[2025-11-19T22:34:49.477+0000] {subprocess.py:93} INFO - $GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+[2025-11-19T22:34:49.477+0000] {subprocess.py:93} INFO -     - quiet|q|silence|s|silent|none|n|0: for no message or exception
+[2025-11-19T22:34:49.478+0000] {subprocess.py:93} INFO -     - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+[2025-11-19T22:34:49.478+0000] {subprocess.py:93} INFO -     - error|e|exception|raise|r|2: for a raised exception
+[2025-11-19T22:34:49.478+0000] {subprocess.py:93} INFO - 
+[2025-11-19T22:34:49.479+0000] {subprocess.py:93} INFO - Example:
+[2025-11-19T22:34:49.479+0000] {subprocess.py:93} INFO -     export GIT_PYTHON_REFRESH=quiet
+[2025-11-19T22:34:49.480+0000] {subprocess.py:93} INFO - 
+[2025-11-19T22:34:53.607+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-11-19T22:34:53.608+0000] {subprocess.py:93} INFO -   File "/opt/***/scripts/train_optuna_mlflow.py", line 81, in <module>
+[2025-11-19T22:34:53.608+0000] {subprocess.py:93} INFO -     run()
+[2025-11-19T22:34:53.609+0000] {subprocess.py:93} INFO -   File "/opt/***/scripts/train_optuna_mlflow.py", line 71, in run
+[2025-11-19T22:34:53.609+0000] {subprocess.py:93} INFO -     mlflow.sklearn.log_model(best_model, artifact_path='model')
+[2025-11-19T22:34:53.610+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/mlflow/sklearn/__init__.py", line 411, in log_model
+[2025-11-19T22:34:53.610+0000] {subprocess.py:93} INFO -     return Model.log(
+[2025-11-19T22:34:53.611+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/mlflow/models/model.py", line 620, in log
+[2025-11-19T22:34:53.611+0000] {subprocess.py:93} INFO -     mlflow.tracking.fluent.log_artifacts(local_path, mlflow_model.artifact_path)
+[2025-11-19T22:34:53.611+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/mlflow/tracking/fluent.py", line 1030, in log_artifacts
+[2025-11-19T22:34:53.612+0000] {subprocess.py:93} INFO -     MlflowClient().log_artifacts(run_id, local_dir, artifact_path)
+[2025-11-19T22:34:53.612+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/mlflow/tracking/client.py", line 1195, in log_artifacts
+[2025-11-19T22:34:53.613+0000] {subprocess.py:93} INFO -     self._tracking_client.log_artifacts(run_id, local_dir, artifact_path)
+[2025-11-19T22:34:53.613+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/mlflow/tracking/_tracking_service/client.py", line 538, in log_artifacts
+[2025-11-19T22:34:53.614+0000] {subprocess.py:93} INFO -     self._get_artifact_repo(run_id).log_artifacts(local_dir, artifact_path)
+[2025-11-19T22:34:53.614+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/mlflow/store/artifact/local_artifact_repo.py", line 59, in log_artifacts
+[2025-11-19T22:34:53.614+0000] {subprocess.py:93} INFO -     mkdir(artifact_dir)
+[2025-11-19T22:34:53.615+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/mlflow/utils/file_utils.py", line 204, in mkdir
+[2025-11-19T22:34:53.615+0000] {subprocess.py:93} INFO -     raise e
+[2025-11-19T22:34:53.615+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/mlflow/utils/file_utils.py", line 201, in mkdir
+[2025-11-19T22:34:53.616+0000] {subprocess.py:93} INFO -     os.makedirs(target)
+[2025-11-19T22:34:53.616+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.8/os.py", line 213, in makedirs
+[2025-11-19T22:34:53.617+0000] {subprocess.py:93} INFO -     makedirs(head, exist_ok=exist_ok)
+[2025-11-19T22:34:53.617+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.8/os.py", line 213, in makedirs
+[2025-11-19T22:34:53.617+0000] {subprocess.py:93} INFO -     makedirs(head, exist_ok=exist_ok)
+[2025-11-19T22:34:53.618+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.8/os.py", line 213, in makedirs
+[2025-11-19T22:34:53.618+0000] {subprocess.py:93} INFO -     makedirs(head, exist_ok=exist_ok)
+[2025-11-19T22:34:53.619+0000] {subprocess.py:93} INFO -   [Previous line repeated 1 more time]
+[2025-11-19T22:34:53.619+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.8/os.py", line 223, in makedirs
+[2025-11-19T22:34:53.619+0000] {subprocess.py:93} INFO -     mkdir(name, mode)
+[2025-11-19T22:34:53.620+0000] {subprocess.py:93} INFO - PermissionError: [Errno 13] Permission denied: '/mlruns'
+[2025-11-19T22:34:54.159+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-11-19T22:34:54.171+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-11-19T22:34:54.174+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=full_ml_pipeline_v2, task_id=retrain_task, execution_date=20251119T221950, start_date=20251119T222752, end_date=20251119T223454
+[2025-11-19T22:34:54.190+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 28 for task retrain_task (Bash command failed. The command returned a non-zero exit code 1.; 273)
+[2025-11-19T22:34:54.201+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-11-19T22:34:54.223+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

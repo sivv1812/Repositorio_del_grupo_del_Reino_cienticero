@@ -1,0 +1,46 @@
+{
+  "per_feature": {
+    "customer_id": {
+      "psi": 0.017477454059812898,
+      "ks_pvalue": 1.0537249122955344e-21,
+      "drift": true
+    },
+    "product_id": {
+      "psi": 0.21150956593794284,
+      "ks_pvalue": 3.009678608930481e-170,
+      "drift": true
+    },
+    "order_id": {
+      "psi": 0.2934775738936704,
+      "ks_pvalue": 0.0,
+      "drift": true
+    },
+    "items": {
+      "psi": 0.050187341982816255,
+      "ks_pvalue": 2.055669787529472e-21,
+      "drift": true
+    },
+    "Y": {
+      "psi": 5.3681810549910234e-05,
+      "ks_pvalue": 4.4584275736471436e-15,
+      "drift": true
+    },
+    "X": {
+      "psi": 5.3681810549910234e-05,
+      "ks_pvalue": 4.696801242604647e-18,
+      "drift": true
+    },
+    "num_deliver_per_week": {
+      "psi": 0.00969266580847419,
+      "ks_pvalue": 0.08352062868920496,
+      "drift": false
+    },
+    "size": {
+      "psi": 0.00029433808703206824,
+      "ks_pvalue": 3.259099099022686e-18,
+      "drift": true
+    }
+  },
+  "n_drift": 7,
+  "global_drift": true
+}

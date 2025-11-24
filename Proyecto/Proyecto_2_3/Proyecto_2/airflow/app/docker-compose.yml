@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    # buscar dentro de la carpeta backend
+    command: python backend/main.py
+    volumes:
+      - ../data:/app/data
+    environment:
+      - DATA_DIR=/app/data
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    # buscar dentro de la carpeta frontend
+    command: python frontend/main.py
+    environment:
+      - API_URL=http://backend:8000/predict
+    ports:
+      - "7860:7860"
+    depends_on:
+      - backend

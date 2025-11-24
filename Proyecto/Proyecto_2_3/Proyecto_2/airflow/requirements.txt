@@ -1,0 +1,10 @@
+pandas
+numpy
+scikit-learn
+xgboost
+optuna
+mlflow==2.9.2
+scipy
+pyarrow
+fastparquet
+psycopg2-binary
