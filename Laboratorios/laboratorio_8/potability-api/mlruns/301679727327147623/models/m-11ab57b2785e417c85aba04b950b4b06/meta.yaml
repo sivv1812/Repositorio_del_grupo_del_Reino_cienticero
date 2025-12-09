@@ -1,0 +1,10 @@
+artifact_location: file:///c:/Users/Luis%20Ortega/Desktop/Laboratorio%20de%20Programaci%C3%B3n%20Cient%C3%ADfica%20MDS/Lab8/mlruns/301679727327147623/models/m-11ab57b2785e417c85aba04b950b4b06/artifacts
+creation_timestamp: 1760816851788
+experiment_id: '301679727327147623'
+last_updated_timestamp: 1760816859379
+model_id: m-11ab57b2785e417c85aba04b950b4b06
+model_type: null
+name: model
+source_run_id: 71d871ef4fc24e90802be8599ff0149c
+status: 2
+status_message: null

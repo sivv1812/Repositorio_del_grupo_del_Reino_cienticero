@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/Luis%20Ortega/Desktop/Laboratorio%20de%20Programaci%C3%B3n%20Cient%C3%ADfica%20MDS/Lab8/mlruns/301679727327147623/8f07b7723e2d405bb2b687db3e609530/artifacts
+end_time: 1760813862220
+entry_point_name: ''
+experiment_id: '301679727327147623'
+lifecycle_stage: active
+run_id: 8f07b7723e2d405bb2b687db3e609530
+run_name: XGBoost (lr=0.0436, depth=8)
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760813860900
+status: 3
+tags: []
+user_id: Luis Ortega
